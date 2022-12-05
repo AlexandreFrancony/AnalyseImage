@@ -1,6 +1,6 @@
 # AnalyseImage
 
-Groupe composé de : 
+Groupe composé de :
     Alexandre Francony
     Pierre Valles
     Victor Bonnin

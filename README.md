@@ -2,6 +2,6 @@
 
 Groupe composé de :
 Alexandre Francony
-Pierre Vales
+Pierre Valles
 Victor Bonnin
 Joris Casadavant

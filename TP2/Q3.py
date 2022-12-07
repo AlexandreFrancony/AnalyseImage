@@ -12,3 +12,6 @@ I = plt.imread(coco)
 
 #Fonction Chanda
 def Chanda(I,n):
+
+
+#J'ai rien compris à l'algorithme de Chanda, je ne sais pas comment coder ça.

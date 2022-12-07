@@ -14,7 +14,6 @@ I = plt.imread(cube)
 def Derivation(I,Mask3x3):
     return signal.convolve2d(I, Mask3x3, boundary='symm', mode='same')
 
-
 #Masque de convolution de dérivation
 Mask = np.array([[0, 1, 0], [1, -4, 1], [0, 1, 0]])
 

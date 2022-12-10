@@ -18,7 +18,8 @@ def Debruitage(I):
     #Filtrage
     S = np.where(np.abs(S) < 10, 0, S)
     #TF inverse
-    return np.fft.ifft2(S)
+    S = np.fft.ifft2(S)
+    return S
 
 #Débruitage
 D = Debruitage(I)

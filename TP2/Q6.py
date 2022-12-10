@@ -12,7 +12,7 @@ def Derivation(I,Mask3x3):
     return signal.convolve2d(I, Mask3x3, boundary='symm', mode='same')
 
 #Masque de convolution de dérivation
-Mask = np.array( [[1/16, 2/16, 1/16], [2/16, 4/16, 2/16], [1/16, 2/16, 1/16]]    )
+Mask = np.array([[1/16, 2/16, 1/16], [2/16, 4/16, 2/16], [1/16, 2/16, 1/16]])
 
 #Convolution de l'image par le masque 1 fois
 D = Derivation(I, Mask)

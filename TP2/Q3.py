@@ -11,7 +11,20 @@ coco = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+"\\Images\\co
 I = plt.imread(coco)
 
 #Fonction Chanda
-def Chanda(I,n):
+def Chanda(I):
+    return I - signal.convolve2d(I, Mask, boundary='symm', mode='same')
 
+#Masque de convolution de dérivation
+Mask = np.array([[0, 1, 0], [1, -4, 1], [0, 1, 0]])
 
-#J'ai rien compris à l'algorithme de Chanda, je ne sais pas comment coder ça.
+#Convolution de l'image par le masque 1 fois
+D = Chanda(I)
+
+#Affichage
+plt.figure()
+plt.imshow(I, cmap='gray')
+plt.title('Image originale')
+plt.figure()
+plt.imshow(D, cmap='gray')
+plt.title('Image dérivée')
+plt.show()

@@ -1,0 +1,1 @@
+#  Programmer l'opérateur de lissage median 3x3. Interprétation des résultats.

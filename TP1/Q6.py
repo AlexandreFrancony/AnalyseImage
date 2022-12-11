@@ -1,0 +1,1 @@
+#Coder sous Python l'algorithme de recadrage de dynamique d'une image.

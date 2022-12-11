@@ -26,8 +26,7 @@ def ZoomCart(image, zoom):
                 image2[i, j] = image[x, y]
 
     return image2
-
-    
+ 
 
 #affectation de la fonction ZoomCart à la variable image2 en coordonnées cartésiennes
 image2 = ZoomCart(image, 0.7)

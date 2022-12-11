@@ -1,4 +1,11 @@
+import os
 import numpy as np
+import matplotlib.pyplot as plt
+from scipy import signal
+
+#Lecture de l'image
+coco = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+"\\Images\\coco.bmp"
+I = plt.imread(coco)
 
 def dilatation(image, se):
     # Initialisation de la sortie
@@ -25,3 +32,4 @@ def erosion(image, kernel):
     for y in range(image.shape[0]):
         output[y,x]=(kernel*image_padded[y:y+3,x:x+3]).min()
     return output
+

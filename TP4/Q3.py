@@ -1,4 +1,3 @@
-
 def squelettisation(image):
  
     # Créer une copie de l'image

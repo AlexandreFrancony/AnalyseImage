@@ -1,20 +1,36 @@
-def axe_median(image):
-  # Créer une liste vide pour stocker les pixels
-  pixels = []
+#Transposer sous Python l'algorithme d'axe median. Test sur autres images binaires
 
-  # Parcourir les lignes et les colonnes pour ajouter les pixels à la liste
-  for ligne in range(image.shape[0]):
-    for colonne in range(image.shape[1]):
-      pixels.append(image[ligne, colonne])
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import ndimage
 
-  # Trier la liste
-  pixels.sort()
+#Lecture de l'image
+coco = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+"\\Images\\coco.bmp"
+img = plt.imread(coco)
 
-  # Calculer l'axe médian
-  median = len(pixels) // 2
+#Affichage de l'image
+plt.imshow(img, cmap='gray')
+plt.show()
 
-  # Retourner l'axe médian
-  return pixels[median]
+#Calcul de l'axe median
+def median_axis(img):
+    #Calcul de la distance de chaque pixel à l'origine
+    dist = np.zeros(img.shape)
+    for i in range(img.shape[0]):
+        for j in range(img.shape[1]):
+            dist[i,j] = np.sqrt(i**2+j**2)
+    #Calcul de l'axe median
+    axis = np.zeros(img.shape)
+    for i in range(img.shape[0]):
+        for j in range(img.shape[1]):
+            if img[i,j] == 1:
+                axis[i,j] = dist[i,j]
+    return axis
 
-# Appeler la fonction
-axe_median(image)
+#Calcul de l'axe median
+axis = median_axis(img)
+
+#Affichage de l'axe median
+plt.imshow(axis, cmap='gray')
+plt.show()
